@@ -1,0 +1,2 @@
+1	65.2	120		2020	Lenovo	ideapad gaming 3
+2	20.5	15		2020	qwertyuiop	asdfghjkl
