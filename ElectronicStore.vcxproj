@@ -138,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Accessory.hpp" />
-    <ClInclude Include="Admin.hpp" />
     <ClInclude Include="Client.hpp" />
     <ClInclude Include="Employee.hpp" />
     <ClInclude Include="Exception.hpp" />

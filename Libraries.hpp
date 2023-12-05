@@ -27,6 +27,7 @@
 #include <openssl/evp.h>
 #include <openssl/rand.h>
 #include <openssl/err.h>
+#include <openssl/aes.h>
 
 #include <openssl/sha.h> // lib to encrypt data
 

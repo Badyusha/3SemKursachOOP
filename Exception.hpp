@@ -6,9 +6,14 @@
 template<typename T>
 class BadAllocException : std::bad_alloc {
 	std::shared_ptr<T> exception;
+	static inline int errorsCount = 0;
 public:
-	BadAllocException() {}
+	BadAllocException() {
+		++errorsCount;
+	}
+
 	BadAllocException(T exception) : std::bad_alloc() {
+		++errorsCount;
 		this->exception = std::make_shared<T>(exception);
 	}
 

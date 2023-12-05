@@ -181,7 +181,7 @@ namespace employee {
 	inline int registerEmployee(std::vector<Person*>& usersVector) {
 		auto employeeInfoPair = reg();
 
-		int id = usersVector.size() + ID_NUM::MIN_ID_NUM;
+		int id = usersVector.size() + ID_NUM::MIN_ID_NUM + 1;
 
 		// this loop is to disable conflicts with id when we deleted user
 		for (auto user : usersVector) {
@@ -192,7 +192,7 @@ namespace employee {
 		}
 
 
-		auto newEmployee = new Employee(id, employeeInfoPair.first, encrypt(employeeInfoPair.second, "12345678901234567890", "12345678901234567890"));
+		auto newEmployee = new Employee(id, employeeInfoPair.first, encrypt(employeeInfoPair.second, "0x30"));
 
 		std::fstream out("Employees.txt", std::ios::app);
 		out << newEmployee;

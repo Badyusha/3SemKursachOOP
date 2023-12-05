@@ -20,7 +20,7 @@ public:
 
 	void setId(const int& id_) { this->id = id_; }
 	void setName(const std::string& name_) { this->name = name_; }
-	void setPassword(const std::string& password_) { this->password = password_; }
+	void setPassword(std::string password_) { this->password = password_; }
 
 	virtual void showPersonalInfo() const = 0;
 	virtual void changePersonalInfo() = 0;

@@ -52,7 +52,6 @@ namespace client {
 
 	inline void Client::showPersonalInfo() const {
 		system("cls");
-		//16 = 80
 		std::cout << "\t\t\t\t\t\t\t\tИнформация о вас:\n" << std::endl << "\t\t\t\t\t\t\t\t"
 			<< std::setfill('—') << std::setw(PERS_CAB::UNDERLINE_LEN) << "" << std::setfill(' ') << std::endl
 			<< std::setw(PERS_CAB::LEFT_COLUMN_WIDTH) << std::left << "\t\t\t\t\t\t\t\t| Имя "
@@ -245,7 +244,7 @@ namespace client {
 			getline(std::cin, email);
 		} while (!correctEmail(email));
 
-		int id = usersVector.size() + ID_NUM::MIN_ID_NUM;
+		int id = usersVector.size() + ID_NUM::MIN_ID_NUM + 1;
 		for (auto user : usersVector) {
 			if (user->getId() != id) {
 				break;
@@ -253,7 +252,7 @@ namespace client {
 			id++;
 		}
 
-		auto newClient = new Client(id, clientInfoPair.first, encrypt(clientInfoPair.second, "12345678901234567890", "12345678901234567890"), email);
+		auto newClient = new Client(id, clientInfoPair.first, encrypt(clientInfoPair.second, "0x30"), email);
 		
 		std::fstream out("Clients.txt", std::ios::app);
 		out << newClient;

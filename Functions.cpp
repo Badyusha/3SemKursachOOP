@@ -221,52 +221,102 @@ int writeUsersDataIntoFiles(const std::vector<Person*>& usersVector) {
 }
 
 
-
-std::string encrypt(std::string plain_text, std::string key, std::string iv) {
+std::string encrypt(const std::string& plaintext, const std::string& key) {
 	EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
-	EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, (unsigned char*)key.c_str(), (unsigned char*)iv.c_str());
+	EVP_CIPHER_CTX_init(ctx);
 
-	int block_size = EVP_CIPHER_CTX_block_size(ctx);
-	int cipher_text_len = plain_text.length() + block_size;
-	unsigned char* cipher_text = new unsigned char[cipher_text_len];
-	int len;
+	EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr, reinterpret_cast<const unsigned char*>(key.c_str()), nullptr);
 
-	EVP_EncryptUpdate(ctx, cipher_text, &len, (unsigned char*)plain_text.c_str(), plain_text.length());
+	std::string ciphertext;
+	ciphertext.resize(plaintext.size() + AES_BLOCK_SIZE, '\0');
 
-	int final_len;
+	int len = 0;
+	EVP_EncryptUpdate(ctx, reinterpret_cast<unsigned char*>(&ciphertext[0]), &len,
+		reinterpret_cast<const unsigned char*>(plaintext.c_str()), plaintext.size());
 
-	EVP_EncryptFinal_ex(ctx, cipher_text + len, &final_len);
+	int ciphertextLen = len;
 
-	std::string result((char*)cipher_text, len + final_len);
-	delete[] cipher_text;
+	EVP_EncryptFinal_ex(ctx, reinterpret_cast<unsigned char*>(&ciphertext[len]), &len);
+	ciphertextLen += len;
 
 	EVP_CIPHER_CTX_free(ctx);
 
-	return result;
+	return ciphertext.substr(0, ciphertextLen);
 }
 
-std::string decrypt(std::string cipher_text, std::string key, std::string iv) {
+std::string decrypt(const std::string& ciphertext, const std::string& key) {
 	EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
-	EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, (unsigned char*)key.c_str(), (unsigned char*)iv.c_str());
+	EVP_CIPHER_CTX_init(ctx);
 
-	int block_size = EVP_CIPHER_CTX_block_size(ctx);
-	int plain_text_len = cipher_text.length() + block_size;
-	unsigned char* plain_text = new unsigned char[plain_text_len];
-	int len;
+	EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr, reinterpret_cast<const unsigned char*>(key.c_str()), nullptr);
 
-	EVP_DecryptUpdate(ctx, plain_text, &len, (unsigned char*)cipher_text.c_str(), cipher_text.length());
+	std::string plaintext;
+	plaintext.resize(ciphertext.size(), '\0');
 
-	int final_len;
+	int len = 0;
+	EVP_DecryptUpdate(ctx, reinterpret_cast<unsigned char*>(&plaintext[0]), &len,
+		reinterpret_cast<const unsigned char*>(ciphertext.c_str()), ciphertext.size());
 
-	EVP_DecryptFinal_ex(ctx, plain_text + len, &final_len);
+	int plaintextLen = len;
 
-	std::string result((char*)plain_text, len + final_len);
-	delete[] plain_text;
+	EVP_DecryptFinal_ex(ctx, reinterpret_cast<unsigned char*>(&plaintext[len]), &len);
+	plaintextLen += len;
 
 	EVP_CIPHER_CTX_free(ctx);
 
-	return result;
+	return plaintext.substr(0, plaintextLen);
 }
+
+
+
+
+
+
+//std::string encrypt(std::string plain_text, std::string key, std::string iv) {
+//	EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
+//	EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, (unsigned char*)key.c_str(), (unsigned char*)iv.c_str());
+//
+//	int block_size = EVP_CIPHER_CTX_block_size(ctx);
+//	int cipher_text_len = plain_text.length() + block_size;
+//	unsigned char* cipher_text = new unsigned char[cipher_text_len];
+//	int len;
+//
+//	EVP_EncryptUpdate(ctx, cipher_text, &len, (unsigned char*)plain_text.c_str(), plain_text.length());
+//
+//	int final_len;
+//
+//	EVP_EncryptFinal_ex(ctx, cipher_text + len, &final_len);
+//
+//	std::string result((char*)cipher_text, len + final_len);
+//	delete[] cipher_text;
+//
+//	EVP_CIPHER_CTX_free(ctx);
+//
+//	return result;
+//}
+//
+//std::string decrypt(std::string cipher_text, std::string key, std::string iv) {
+//	EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
+//	EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, (unsigned char*)key.c_str(), (unsigned char*)iv.c_str());
+//
+//	int block_size = EVP_CIPHER_CTX_block_size(ctx);
+//	int plain_text_len = cipher_text.length() + block_size;
+//	unsigned char* plain_text = new unsigned char[plain_text_len];
+//	int len;
+//
+//	EVP_DecryptUpdate(ctx, plain_text, &len, (unsigned char*)cipher_text.c_str(), cipher_text.length());
+//
+//	int final_len;
+//
+//	EVP_DecryptFinal_ex(ctx, plain_text + len, &final_len);
+//
+//	std::string result((char*)plain_text, len + final_len);
+//	delete[] plain_text;
+//
+//	EVP_CIPHER_CTX_free(ctx);
+//
+//	return result;
+//}
 
 
 
@@ -527,7 +577,7 @@ void authorizeUser() {
 
 	int incorrectInputCounter = 0;
 
-	while (decrypt((*user)->getPassword(), "12345678901234567890", "12345678901234567890") != password && incorrectInputCounter != INCORRECT_PASSWORD::ATTEMPTS_COUNT) {
+	while (decrypt((*user)->getPassword(), "0x30") != password && incorrectInputCounter != INCORRECT_PASSWORD::ATTEMPTS_COUNT) {
 		std::cout << "\n\n" + tabulation + "Неверный пароль!\n" + tabulation + "У вас осталось " << INCORRECT_PASSWORD::ATTEMPTS_COUNT - incorrectInputCounter << " попыток\n" << std::endl;
 		std::this_thread::sleep_for(std::chrono::milliseconds(SLEEP_FOR::MILISEC)); // sleep while incorrect message disappeared
 		gotoxy(INCORRECT_PASSWORD::INCORRECT_PASSWORD_X_COORD, INCORRECT_PASSWORD::INCORRECT_PASSWORD_Y_COORD);
@@ -569,22 +619,22 @@ void registerUser() {
 	if (!readUsersDataFromFiles(usersVector)) { return; }
 
 	switch (menuChoice) {
-	case REGISTER::CLIENT: {
-		const int id = client::registerClient(usersVector);
-		redirectToMenu(usersVector, id);
-		break;
-	}
-	case REGISTER::EMPLOYEE: {
-		const int id = employee::registerEmployee(usersVector);
-		redirectToMenu(usersVector, id);
-		// same
-		break;
-	}
-	case STATE::EXIT: {
-		system("cls");
-		return;
-	}
-	default: { errorInput(79, REG_MENU_COORD::REGISTER_MENU_Y_COORD); }
+		case REGISTER::CLIENT: {
+			const int id = client::registerClient(usersVector);
+			redirectToMenu(usersVector, id);
+			break;
+		}
+		case REGISTER::EMPLOYEE: {
+			const int id = employee::registerEmployee(usersVector);
+			redirectToMenu(usersVector, id);
+			// same
+			break;
+		}
+		case STATE::EXIT: {
+			system("cls");
+			return;
+		}
+		default: { errorInput(79, REG_MENU_COORD::REGISTER_MENU_Y_COORD); }
 	}
 }
 

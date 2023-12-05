@@ -1,60 +1,8 @@
-﻿  Functions.cpp
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(82,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Functions.cpp')
-  
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(248,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Functions.cpp')
-  
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Employee.hpp(84,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  (compiling source file 'Functions.cpp')
-  
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Employee.hpp(184,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  (compiling source file 'Functions.cpp')
-  
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(230,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(234,97): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(253,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(257,98): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(280,82): warning C4834: discarding return value of function with [[nodiscard]] attribute
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(510,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(565,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(616,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(747,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(793,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(851,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(871,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(987,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1029,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1153,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1200,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1256,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1261,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1265,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1332,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1345,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1414,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1419,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1423,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1512,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1530,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1575,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1645,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1680,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(32,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(32,18):
-  the template instantiation context (the oldest one first) is
-  	D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1173,8):
-  	see reference to function template instantiation 'int personalCabinet<client::Client*>(T &)' being compiled
-          with
-          [
-              T=client::Client *
-          ]
-  
-  ElectronicStore.cpp
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(82,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+﻿  ElectronicStore.cpp
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(81,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   (compiling source file 'ElectronicStore.cpp')
   
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(248,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(247,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'ElectronicStore.cpp')
   
 D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Employee.hpp(84,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
@@ -64,6 +12,56 @@ D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Employee.hpp
   (compiling source file 'ElectronicStore.cpp')
   
 D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\ElectronicStore.cpp(18,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Functions.cpp
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(81,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  (compiling source file 'Functions.cpp')
+  
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Client.hpp(247,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Functions.cpp')
+  
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Employee.hpp(84,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  (compiling source file 'Functions.cpp')
+  
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Employee.hpp(184,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Functions.cpp')
+  
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(235,76): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(258,78): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(330,82): warning C4834: discarding return value of function with [[nodiscard]] attribute
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(560,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(615,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(666,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(797,21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(843,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(901,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(921,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1037,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1079,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1203,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1250,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1306,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1311,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1315,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1382,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1395,30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1464,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1469,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1473,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1562,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1580,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1625,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1695,19): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1730,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(32,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(32,18):
+  the template instantiation context (the oldest one first) is
+  	D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(1223,8):
+  	see reference to function template instantiation 'int personalCabinet<client::Client*>(T &)' being compiled
+          with
+          [
+              T=client::Client *
+          ]
+  
   Generating Code...
-D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(637): warning C4172: returning address of local variable or temporary: productsVector
+D:\study\ООПиП\2course\Kursach\ElectronicStore\ElectronicStore\Functions.cpp(687): warning C4172: returning address of local variable or temporary: productsVector
   ElectronicStore.vcxproj -> D:\study\ООПиП\2course\Kursach\ElectronicStore\x64\Debug\ElectronicStore.exe

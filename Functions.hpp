@@ -48,7 +48,7 @@ void deleteProduct();
 
 void createOrdersReport();
 
-std::string encrypt(std::string plain_text, std::string key, std::string iv);
-std::string decrypt(std::string plain_text, std::string key, std::string iv);
+std::string encrypt(const std::string& plain_text, const std::string& key);
+std::string decrypt(const std::string& plain_text, const std::string& key);
 
 #endif

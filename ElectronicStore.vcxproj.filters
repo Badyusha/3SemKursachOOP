@@ -38,9 +38,6 @@
     <ClInclude Include="Order.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Admin.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Client.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
